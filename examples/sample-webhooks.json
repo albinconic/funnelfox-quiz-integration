@@ -1,0 +1,72 @@
+{
+  "quiz_completed_example": {
+    "id": "evt_1234567890",
+    "type": "quiz.completed",
+    "created": "2025-07-31T23:20:00.000Z",
+    "data": {
+      "quiz_id": "quiz_abc123",
+      "user_id": "user_456789",
+      "email": "user@example.com",
+      "answers": [
+        {
+          "question_id": "q1",
+          "question": "What is your primary business goal?",
+          "answer": "Increase revenue",
+          "score": 10
+        },
+        {
+          "question_id": "q2",
+          "question": "What is your current monthly revenue?",
+          "answer": "$10,000 - $50,000",
+          "score": 8
+        }
+      ],
+      "total_score": 18,
+      "completion_time": 120,
+      "metadata": {
+        "source": "website",
+        "campaign": "summer2025"
+      }
+    }
+  },
+  "payment_succeeded_example": {
+    "id": "evt_payment_123",
+    "type": "payment.succeeded",
+    "created": "2025-07-31T23:15:00.000Z",
+    "data": {
+      "payment_id": "pay_xyz789",
+      "amount": 9900,
+      "currency": "USD",
+      "customer_email": "customer@example.com",
+      "customer_id": "cust_123456",
+      "product_id": "prod_course_1",
+      "product_name": "Business Growth Masterclass",
+      "status": "succeeded",
+      "payment_method": "card",
+      "metadata": {
+        "coupon_code": "SAVE20",
+        "affiliate_id": "aff_partner1"
+      }
+    }
+  },
+  "lead_created_example": {
+    "id": "evt_lead_456",
+    "type": "lead.created",
+    "created": "2025-07-31T23:10:00.000Z",
+    "data": {
+      "lead_id": "lead_789123",
+      "email": "newlead@example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "phone": "+1-555-123-4567",
+      "source": "facebook_ad",
+      "tags": ["high-intent", "webinar-attendee"],
+      "custom_fields": {
+        "industry": "SaaS",
+        "company_size": "50-100",
+        "interest_level": "high"
+      },
+      "created_at": "2025-07-31T23:10:00.000Z"
+    }
+  }
+}

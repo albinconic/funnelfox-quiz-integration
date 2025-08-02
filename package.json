@@ -1,0 +1,27 @@
+{
+  "name": "funnelfox-quiz-integration",
+  "version": "1.0.0",
+  "description": "Fastify backend to handle FunnelFox Webhooks",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "clean": "rimraf dist",
+    "test:webhooks": "node scripts/test-webhooks.js"
+  },
+  "keywords": ["fastify", "typescript", "webhooks", "funnelfox"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^4.24.3",
+    "dotenv": "^16.3.1",
+    "@fastify/cors": "^8.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "ts-node-dev": "^2.0.0",
+    "@types/node": "^20.10.5",
+    "rimraf": "^5.0.5"
+  }
+}
