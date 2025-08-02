@@ -48,15 +48,14 @@ export class WebhookController {
    */
   private async handleQuizEvent(event: QuizWebhookEvent): Promise<WebhookResponse> {
     logger.info(`Processing quiz event: ${event.type}`, {
-      quizId: event.data.quiz_id,
+      quizId: event.data.id,
       userEmail: event.data.email,
-      totalScore: event.data.total_score
     });
 
     switch (event.type) {
 			case 'onboarding.started':
 				logger.info('Onboarding started', {
-						quizId: event.data.quiz_id,
+						quizId: event.data.id,
 						userEmail: event.data.email
 				});
 				break;
@@ -64,15 +63,14 @@ export class WebhookController {
 			case 'onboarding.completed':
 
         logger.info('Onboarding completed', {
-          quizId: event.data.quiz_id,
-          score: event.data.total_score,
-          answers: event.data.answers?.length
+          quizId: event.data.id,
+          replies: event.data.replies?.length
         });
         break;
 
       case 'purchase.completed':
         logger.info('Purchase completed', {
-          quizId: event.data.quiz_id,
+          quizId: event.data.id,
           userEmail: event.data.email
         });
         break;
